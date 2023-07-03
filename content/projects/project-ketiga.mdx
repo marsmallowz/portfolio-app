@@ -1,0 +1,159 @@
+---
+title: "Multi Warehouse E-Commerce (Niagajaya)"
+publishedAt: "1 July 2023"
+summary: "This is final project from Purwadhika"
+---
+
+Niagajaya merupakan nama dari aplikasi yang saya kerjakan beserta teman-teman sebagai **Project Akhir**,
+untuk digunakan sebagai salah satu penilaian kelulusan di Purwadhika.
+
+Tech Stack yang digunakan:
+
+- React.js
+- Express.js
+- Chakra UI
+- Prisma
+- Mysql
+
+## What is Niagajaya?
+
+Niagajaya adalah sebuah aplikasi e-commerce yang menerapkan lebih dari satu gudang sebagai tempat penyimpanan barangnya.
+Penerapan ini bertujuan untuk meningkatkan kecepatan pengiriman dan juga mengurangi biaya pengiriman.
+
+## Tasks I do
+
+Berikut adalah beberapa tugas atau fitur **(Frontend dan Backend)** yang saya kerjakan dalam pengembangan aplikasi Niagajaya yang digunakan pengguna:
+
+### Homepage
+
+- Membuat Halaman Homepage.
+
+  Persyaratan:
+
+  - Pengguna dapat melihat banner promosi dengan data statik.
+  - Pengguna dapat melihat daftar kategori dan melakukan filter.
+
+[![Image Project](/project-ketiga-screenshot/homepage.png)](/project-ketiga-screenshot/homepage.png)
+
+### Authorization & Authentication
+
+- Membuat Halaman Login
+
+  Persyaratan:
+
+  - Pengguna dapat masuk ke aplikasi menggunakan email dan password.
+  - Jika telah login, pengguna akan di arahkan ke halaman terakhir sebelum login.
+
+[![Image Project](/project-ketiga-screenshot/login.png)](/project-ketiga-screenshot/login.png)
+
+- Membuat Halaman Reset Password
+
+  Persyaratan:
+
+  - Pengguna dapat reset password dengan menggunakan email.
+  - Pengguna menerima email yang berisi link untuk reset password.
+
+[![Image Project](/project-ketiga-screenshot/reset-password.png)](/project-ketiga-screenshot/reset-password.png)
+
+- Membuat Verifikasi Pengguna yang Login
+
+  Persyaratan:
+
+  - Pengguna tidak dapat mengakses halaman yang mengharuskan pengguna login seperti halaman keranjang dan settings.
+  - Jika pengguna belum login maka akan di arahkan ke homepage.
+  - Pengguna dapat melihat notifikasi yang menjelaskan bahwa user belum login.
+
+### Profiling
+
+- Membuat Halaman Alamat
+
+  Persyaratan:
+
+  - Pengguna dapat melihat daftar alamat pengguna.
+  - Pengguna dapat menambahkan alamat.
+  - Pengguna dapat mengubah alamat.
+  - Pengguna dapat menghapus alamat.
+
+[![Image Project](/project-ketiga-screenshot/alamat.png)](/project-ketiga-screenshot/alamat.png)
+
+### Product
+
+- Membuat Halaman Produk
+
+  Persyaratan:
+
+  - Pengguna dapat melihat daftar produk dan melakukan filter.
+  - Stok produk yang ditampilkan adalah total stok dari semua warehouse.
+
+[![Image Project](/project-ketiga-screenshot/produk.png)](/project-ketiga-screenshot/produk.png)
+
+- Membuat Halaman Detail Produk
+
+  Persyaratan:
+
+  - Pengguna dapat melihat detail sebuah produk.
+  - Stok produk yang ditampilkan adalah total stok dari semua warehouse.
+
+[![Image Project](/project-ketiga-screenshot/produk-detail.png)](/project-ketiga-screenshot/produk-detail.png)
+
+### Order
+
+- Membuat Fungsi Menambahkan Produk ke Keranjang
+
+  Persyaratan:
+
+  - Pengguna dapat menambahkan produk ke keranjang.
+  - Pengguna tidak dapat menambahkan produk yang tidak memiliki stok ke keranjang.
+  - Pengguna yang belum login tidak bisa menambahkan produk ke keranjang.
+
+- Membuat Halaman Keranjang
+
+  Persyaratan:
+
+  - Pengguna dapat melihat produk yang ada di keranjang.
+  - Pengguna dapat memperbaruhi jumlah stok produk di keranjang.
+  - Pengguna dapat menghapus produk dari keranjang.
+
+[![Image Project](/project-ketiga-screenshot/keranjang.png)](/project-ketiga-screenshot/keranjang.png)
+
+Berikut adalah beberapa tugas atau fitur yang saya kerjakan dalam pengembangan aplikasi Niagajaya yang digunakan admin:
+
+### Warehouse
+
+- Membuat Halaman Warehouse
+
+  Persyaratan:
+
+  - Admin dapat melihat daftar warehouse.
+  - Admin dapat memgubah warehouse.
+  - Admin dapat menghapus warehouse.
+  - Warehouse Admin tidak dapat mengakses halaman ini.
+
+[![Image Project](/project-ketiga-screenshot/admin-warehouse.png)](/project-ketiga-screenshot/admin-warehouse.png)
+
+[![Image Project](/project-ketiga-screenshot/admin-warehouse-create.png)](/project-ketiga-screenshot/admin-warehouse-create.png)
+
+### Order
+
+- Membuat Halaman Pesanan
+
+  Persyaratan:
+
+  - Admin dapat melihat daftar pesanan.
+  - Admin dapat melakukan filter untuk menampilkan daftar pesanan.
+  - Warehouse Admin hanya dapat mengakses daftar pesanan warehousenya saja.
+
+[![Image Project](/project-ketiga-screenshot/admin-orders.png)](/project-ketiga-screenshot/admin-orders.png)
+
+[![Gambar Alt Text](/project-ketiga-screenshot/admin-orders-filter.png)](/project-ketiga-screenshot/admin-orders-filter.png)
+
+- Membuat Fungsi Pembatalan Pemesanan
+
+  Persyaratan:
+
+  - Admin dapat membatalkan pesanan.
+  - Warehouse Admin hanya dapat membatalkan pesanan warehousenya saja.
+  - Karena pengurangan stock terjadi saat pesanan dikrim dan pembatalan hanya dapat dilakukan sebelum pesanan dikirim,
+    maka tidak ada pengembalian stok.
+
+Github repo klik [disini](https://github.com/marsmallowz/JCWD010601 "Github repo Project Ketiga").
