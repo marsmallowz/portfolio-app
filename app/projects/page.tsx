@@ -20,14 +20,32 @@ export default function ProjectsPage() {
   return (
     <div className="flex flex-col gap-3">
       <div>List Project</div>
-      {projects.map((project) => {
+      {/* {projects.map((project) => {
         return (
           <Link key={project.slug} href={"/projects/" + project.slug}>
             <div>{project.meta.title}</div>
             <div>{project.meta.publishedAt}</div>
           </Link>
         );
-      })}
+      })} */}
+
+      {projects
+        .sort((a, b) => {
+          if (new Date(a.meta.publishedAt) > new Date(b.meta.publishedAt)) {
+            return -1;
+          }
+          return 1;
+        })
+        .map((project) => (
+          <Link
+            key={project.slug}
+            href={"/projects/" + project.slug}
+            className="flex flex-col"
+          >
+            <div>{project.meta.title}</div>
+            <div>{project.meta.publishedAt}</div>
+          </Link>
+        ))}
     </div>
   );
 }

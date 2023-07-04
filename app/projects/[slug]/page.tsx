@@ -6,6 +6,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import CustomLink from "@/components/mdx/CustomLink";
 import CustomImg from "@/components/mdx/CustomImg";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join("content/projects"));
@@ -16,7 +17,20 @@ export async function generateStaticParams() {
   return paths;
 }
 
-function getPost({ slug }: { slug: string }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: any;
+}): Promise<Metadata | undefined> {
+  const project = getProject(params);
+
+  return {
+    title: project.fontMatter.title,
+    description: project.fontMatter.description,
+  };
+}
+
+function getProject({ slug }: { slug: string }) {
   const markdownFile = fs.readFileSync(
     path.join("content/projects", slug + `.mdx`),
     "utf-8"
@@ -31,7 +45,7 @@ function getPost({ slug }: { slug: string }) {
 }
 
 export default function Page({ params }: any) {
-  const props = getPost(params);
+  const props = getProject(params);
   return (
     <article className="prose mb-10">
       <h1>{props.fontMatter.title}</h1>

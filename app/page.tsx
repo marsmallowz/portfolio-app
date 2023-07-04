@@ -80,7 +80,10 @@ export default function Home() {
               </div>
             </div>
           </Link>
-          <div className="p-2 border hover:bg-slate-200 cursor-pointer">
+          <Link
+            href={"/projects/project-pertama"}
+            className="p-2 border hover:bg-slate-200 cursor-pointer"
+          >
             <div>Instagram Clone</div>
             <div>Individu</div>
             <div className="flex flex-wrap gap-2 mt-1">
@@ -100,15 +103,18 @@ export default function Home() {
                 Tailwind
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col mb-10">
         <div className="font-bold">Follow me</div>
-        <ul>
-          <li>Linkedin</li>
-          <li>Github</li>
-        </ul>
+        <Link
+          href="https://linkedin.com/in/alsandy-maulana"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </Link>
       </div>
     </div>
   );
