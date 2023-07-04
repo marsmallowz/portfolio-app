@@ -2,8 +2,16 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata = {
-  title: "Portfolio Alsandy Maulana",
-  description: "Web portfolio Alsandy Maulana yang dibuat menggunakan Next.js",
+  title: "Alsandy Maulana",
+  description: "Developer, writer, and creator",
+  openGraph: {
+    title: "Alsandy Maulana",
+    description: "Developer, writer, and creator.",
+    url: "https://alsandymaulana.com",
+    siteName: "Alsandy Maulana",
+    locale: "id",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

@@ -1,36 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import HomePage from "../content/homepage.mdx";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 export default function Home() {
+  const markdownFile = fs.readFileSync(
+    path.join("content/homepage.mdx"),
+    "utf-8"
+  );
+  const { data: fontMatter, content } = matter(markdownFile);
+
   return (
-    <div className="flex flex-col gap-2">
-      <div className="font-bold text-xl">{"I'am Alsandy Maulana"}</div>
-      <p className="prose prose-gray">
-        A web developer with about 6+ month experience that use React.js and
-        Express.js to development a website. Currently focusing on learning to
-        use Typescript and Next.js.
-      </p>
-      <div className="flex flex-col items-center">
-        <Image
-          src={"/profile-image.png"}
-          width={300}
-          height={300}
-          alt="alsandy maulana image"
-        />
-      </div>
+    <article className="prose">
+      <MDXRemote source={content} />
       <div>
-        <div className="font-bold">Study History</div>
-        <p className="prose prose-gray">
-          Graduated with a Computer Science degree from Universitas Negeri
-          Semarang and a Javascript Web Developer bootcamp at Purwadhika.
-        </p>
-      </div>
-      <div>
-        <div className="font-bold">Project & Blog </div>
-        <p className="prose prose-gray">
-          Please use this website to <a>see</a> what projects and blogs I have,
-          here are some projects:
-        </p>
         <div className="flex flex-col gap-2 p-3 border">
           <Link
             href={"/projects/project-ketiga"}
@@ -106,8 +92,8 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col mb-10">
-        <div className="font-bold">Follow me</div>
+      <div className="flex flex-col my-6">
+        <div className="font-bold mb-1">Follow me</div>
         <Link
           href="https://linkedin.com/in/alsandy-maulana"
           target="_blank"
@@ -115,7 +101,14 @@ export default function Home() {
         >
           LinkedIn
         </Link>
+        <Link
+          href="https://github.com/marsmallowz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </Link>
       </div>
-    </div>
+    </article>
   );
 }
