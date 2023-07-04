@@ -46,9 +46,6 @@ function getProject({ slug }: { slug: string }) {
 
 export default function Page({ params }: any) {
   const props = getProject(params);
-  console.log("props");
-
-  console.log(props);
 
   return (
     <article className="prose mb-10">
