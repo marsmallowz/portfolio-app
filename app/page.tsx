@@ -92,8 +92,20 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col my-6">
-        <div className="font-bold mb-1">Follow me</div>
+      <div className="flex flex-col mt-6 mb-3">
+        <div className="font-bold text-lg mb-1">Contact Me</div>
+        <div className="font-medium">alsandymaulana@gmail.com</div>
+        <Link
+          href="https://wa.me/+6281904873006"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium"
+        >
+          +6281904873006
+        </Link>
+      </div>
+      <div className="flex flex-col mt-3 mb-14">
+        <div className="font-bold text-lg mb-1">Follow me</div>
         <Link
           href="https://linkedin.com/in/alsandy-maulana"
           target="_blank"
