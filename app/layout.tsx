@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Alsandy Maulana",
@@ -22,9 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="flex flex-col p-2  max-w-md mx-auto">
+        <main className="flex flex-col max-w-screen min-h-screen mx-auto sm:max-w-md ">
           <Navbar />
-          {children}
+          <div className="flex-grow p-2">{children}</div>
+          <Footer />
         </main>
       </body>
     </html>
