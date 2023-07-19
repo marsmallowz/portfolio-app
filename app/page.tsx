@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
+import ProfileImage from "@/components/mdx/ProfileImage";
 
 export default function Home() {
   const markdownFile = fs.readFileSync(
@@ -14,7 +15,7 @@ export default function Home() {
 
   return (
     <article className="prose ">
-      <MDXRemote source={content} />
+      <MDXRemote source={content} components={{ img: ProfileImage }} />
       <div className="flex flex-col gap-2 p-3 border mt-3 mb-5">
         <Link
           href={"/projects/project-ketiga"}
