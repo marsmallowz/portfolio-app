@@ -7,15 +7,25 @@ import {
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 
+import { BiMap } from "react-icons/bi";
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-5 divide-y pt-5 pb-2 px-3 text-white bg-gray-500">
-      <div className="flex flex-col gap-2 py-1">
+    <div className="flex flex-col gap-3 divide-y pt-5 pb-2 px-3 text-white bg-gray-500">
+      <div>
         <div className="font-semibold">
           <div>Portfolio</div>
           <div>Alsandy Maulana</div>
         </div>
         <div>Inovasi dan kualitas yang berkelanjutan.</div>
+      </div>
+      <div className="flex flex-col gap-2 py-1">
+        <div className="flex flex-col">
+          <div className="font-medium ">Address</div>
+          <div className="flex gap-2 items-center">
+            <BiMap />
+            <div>Tanjungpinang, Kepulauan Riau, Indonesia.</div>
+          </div>
+        </div>
         <div className="flex gap-10">
           <div className="flex flex-col mb-3">
             <div className="font-medium ">Contact Me</div>
