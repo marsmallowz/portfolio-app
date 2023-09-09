@@ -6,6 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import CustomLink from "@/components/mdx/CustomLink";
 import CustomImg from "@/components/mdx/CustomImg";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join("content/projects"));
@@ -23,11 +24,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const project = getProject(params);
 
+  console.log("pro");
+  console.log(project.fontMatter);
   return {
     title: project.fontMatter.title,
     openGraph: {
       title: project.fontMatter.title,
       description: project.fontMatter.summary,
+      images: [project.fontMatter.imageShowcase || ""],
     },
   };
 }
@@ -52,6 +56,11 @@ export default function Page({ params }: any) {
   return (
     <article className="prose mb-10">
       <h1>{props.fontMatter.title}</h1>
+      {/* <Image
+        src={props.fontMatter.imageShowcase || ""}
+        width={500}
+        height={400}
+      /> */}
       <MDXRemote
         source={props.content}
         components={{ a: CustomLink, img: CustomImg }}
