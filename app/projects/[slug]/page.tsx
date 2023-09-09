@@ -22,15 +22,12 @@ export async function generateMetadata({
   params: any;
 }): Promise<Metadata> {
   const project = getProject(params);
-  // console.log("pro");
-  // console.log(project.fontMatter.title);
 
   return {
     title: project.fontMatter.title,
-    description: project.fontMatter.description,
     openGraph: {
       title: project.fontMatter.title,
-      description: project.fontMatter.description,
+      description: project.fontMatter.summary,
     },
   };
 }
