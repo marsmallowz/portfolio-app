@@ -2,7 +2,6 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import CustomLink from "@/components/mdx/CustomLink";
 import CustomImg from "@/components/mdx/CustomImg";
@@ -21,12 +20,18 @@ export async function generateMetadata({
   params,
 }: {
   params: any;
-}): Promise<Metadata | undefined> {
+}): Promise<Metadata> {
   const project = getProject(params);
+  // console.log("pro");
+  // console.log(project.fontMatter.title);
 
   return {
     title: project.fontMatter.title,
     description: project.fontMatter.description,
+    openGraph: {
+      title: project.fontMatter.title,
+      description: project.fontMatter.description,
+    },
   };
 }
 
