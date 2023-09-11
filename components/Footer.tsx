@@ -10,7 +10,7 @@ import {
 import { BiMap } from "react-icons/bi";
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-3 divide-y pt-5 pb-2 px-3 text-white bg-gray-500 dark:bg-gray-600">
+    <div className="flex flex-col gap-3 divide-y pt-5 pb-2 px-3 text-white bg-gray-500 dark:bg-gray-600  mx-auto sm:max-w-lg md:px-5">
       <div>
         <div className="font-semibold">
           <div>Portfolio</div>

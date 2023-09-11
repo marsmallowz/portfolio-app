@@ -13,7 +13,7 @@ export default function CardProjectHome({
   return (
     <Link
       href={"/projects/project-keempat"}
-      className="p-2 border hover:bg-slate-200 dark:hover:bg-yellow-800 cursor-pointer"
+      className="p-2 border border-black dark:border-slate-200 hover:bg-slate-100 dark:hover:bg-yellow-800 cursor-pointer"
     >
       <div className="dark:text-white">{title}</div>
       <div className="dark:text-white">{type}</div>

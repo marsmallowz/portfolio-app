@@ -17,7 +17,7 @@ export default function Home() {
       <article className="prose dark:prose-invert">
         <MDXRemote source={content} components={{ img: ProfileImage }} />
       </article>
-      <div className="flex flex-col gap-2 p-3 border mt-3 mb-5">
+      <div className="flex flex-col gap-2 p-3 border border-black mt-3 mb-5 bg-white dark:border-slate-200 dark:bg-slate-600 ">
         <CardProjectHome title="Skill Swap App (Tukar-Menukar)" type="Individu">
           <ReactTag />
           <NextTag />
