@@ -53,7 +53,7 @@ export default function Page({ params }: any) {
   const props = getProject(params);
 
   return (
-    <article className="prose mb-10">
+    <article className="prose mb-10 prose-invert">
       <h1>{props.fontMatter.title}</h1>
       <MDXRemote
         source={props.content}

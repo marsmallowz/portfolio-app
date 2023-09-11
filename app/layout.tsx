@@ -23,10 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="flex flex-col max-w-screen min-h-screen mx-auto sm:max-w-md ">
-          <Navbar />
-          <div className="flex-grow p-2">{children}</div>
-          <Footer />
+        <main className="bg-white dark:bg-slate-800">
+          <div className="flex flex-col max-w-screen min-h-screen mx-auto sm:max-w-md dark:bg-slate-700">
+            <Navbar />
+            <div className="flex-grow p-2">{children}</div>
+            <Footer />
+          </div>
         </main>
       </body>
     </html>

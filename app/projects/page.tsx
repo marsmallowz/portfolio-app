@@ -20,7 +20,7 @@ export default function ProjectsPage() {
   });
   return (
     <div className="flex flex-col gap-3">
-      <div className="text-xl font-bold">List Project</div>
+      <div className="text-xl font-bold dark:text-white">List Project</div>
       <div className="flex flex-col gap-1 divide-y-2">
         {projects
           .sort((a, b) => {
@@ -33,7 +33,7 @@ export default function ProjectsPage() {
             <Link
               key={project.slug}
               href={"/projects/" + project.slug}
-              className="flex py-2 justify-between items-center"
+              className="flex py-2 justify-between items-center dark:text-white"
             >
               <div className="flex flex-col">
                 <div>{project.meta.title}</div>
