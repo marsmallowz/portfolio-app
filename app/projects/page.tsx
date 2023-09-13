@@ -21,7 +21,7 @@ export default function ProjectsPage() {
   return (
     <div className="flex flex-col gap-3">
       <div className="text-xl font-bold dark:text-white">List Project</div>
-      <div className="flex flex-col gap-1 divide-y-2">
+      <div className="flex flex-col gap-1 divide-y-2 divide-slate-800 dark:divide-white">
         {projects
           .sort((a, b) => {
             if (new Date(a.meta.publishedAt) > new Date(b.meta.publishedAt)) {
