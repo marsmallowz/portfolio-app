@@ -18,7 +18,11 @@ export default function Home() {
         <MDXRemote source={content} components={{ img: ProfileImage }} />
       </article>
       <div className="flex flex-col gap-2 p-3 border border-black mt-3 mb-5 bg-white dark:border-slate-200 dark:bg-slate-600 ">
-        <CardProjectHome title="Skill Swap App (Tukar-Menukar)" type="Individu">
+        <CardProjectHome
+          title="Skill Swap App (Tukar-Menukar)"
+          type="Individu"
+          url="/projects/project-keempat"
+        >
           <ReactTag />
           <NextTag />
           <PrismaTag />
@@ -28,6 +32,7 @@ export default function Home() {
         <CardProjectHome
           title="Multi Warehouse E-Commerce (NiagaJaya)"
           type="Team"
+          url="/projects/project-ketiga"
         >
           <ReactTag />
           <ExpressTag />
@@ -35,14 +40,22 @@ export default function Home() {
           <MysqlTag />
           <ChakraUiTag />
         </CardProjectHome>
-        <CardProjectHome title="Library (OpenLibz)" type="Team">
+        <CardProjectHome
+          title="Library (OpenLibz)"
+          type="Team"
+          url="/projects/project-kedua"
+        >
           <ReactTag />
           <ExpressTag />
           <SequelizeTag />
           <MysqlTag />
           <TailwindTag />
         </CardProjectHome>
-        <CardProjectHome title="Instagram Clone" type="Individu">
+        <CardProjectHome
+          title="Instagram Clone"
+          type="Individu"
+          url="/projects/project-pertama"
+        >
           <ReactTag />
           <ExpressTag />
           <SequelizeTag />
