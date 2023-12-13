@@ -19,6 +19,16 @@ export default function Home() {
       </article>
       <div className="flex flex-col gap-2 p-3 border border-black mt-3 mb-5 bg-white dark:border-slate-200 dark:bg-slate-600 ">
         <CardProjectHome
+          title="Simple Game"
+          type="Individu"
+          url="/projects/simple-game"
+        >
+          <ReactNativeTag />
+          <MongoDbTag />
+          <MongoseTag />
+          <NestTag />
+        </CardProjectHome>
+        <CardProjectHome
           title="Skill Swap App (Tukar-Menukar)"
           type="Individu"
           url="/projects/project-keempat"
@@ -79,10 +89,22 @@ function ReactTag() {
   return <Tag name={"React.Js"} color="bg-cyan-700" />;
 }
 
+function ReactNativeTag() {
+  return <Tag name={"React Native"} color="bg-cyan-600" />;
+}
+
 function ExpressTag() {
   return (
     <div className={`text-sm border px-1 rounded-md max-w-fit bg-yellow-300`}>
       Express.Js
+    </div>
+  );
+}
+
+function NestTag() {
+  return (
+    <div className={`text-sm border px-1 rounded-md max-w-fit bg-red-500`}>
+      Nest.Js
     </div>
   );
 }
@@ -97,6 +119,10 @@ function SequelizeTag() {
 
 function PrismaTag() {
   return <Tag name={"Prisma"} color="bg-indigo-500" />;
+}
+
+function MongoseTag() {
+  return <Tag name={"Mongose"} color="bg-green-500" />;
 }
 
 function MysqlTag() {
