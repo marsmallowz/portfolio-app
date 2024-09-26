@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  mdxRs: true,
+  experimental: {
+    mdxRs: true,
+  },
 };
 
 const withMDX = require("@next/mdx")();
