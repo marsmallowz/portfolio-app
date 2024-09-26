@@ -22,6 +22,9 @@ export default function Home() {
           title="Simple Game"
           type="Individu"
           url="/projects/simple-game"
+          src_image="/image-showcase/Simple%20Game%20Showcase.png"
+          alt_image="Image showcase simplegame"
+          showTitle={false}
         >
           <ReactNativeTag />
           <MongoDbTag />
@@ -32,6 +35,9 @@ export default function Home() {
           title="Skill Swap App (Tukar-Menukar)"
           type="Individu"
           url="/projects/project-keempat"
+          src_image="/image-showcase/Tukar-Menukar%20showcase.png"
+          alt_image="Image showcase tukar-menukar"
+          showTitle={false}
         >
           <ReactTag />
           <NextTag />
@@ -43,6 +49,9 @@ export default function Home() {
           title="Multi Warehouse E-Commerce (NiagaJaya)"
           type="Team"
           url="/projects/project-ketiga"
+          src_image="/image-showcase/Niagajaya%20showcase.png"
+          alt_image="Image showcase niagajaya"
+          showTitle={false}
         >
           <ReactTag />
           <ExpressTag />
@@ -54,6 +63,7 @@ export default function Home() {
           title="Library (OpenLibz)"
           type="Team"
           url="/projects/project-kedua"
+          showTitle={true}
         >
           <ReactTag />
           <ExpressTag />
@@ -65,6 +75,7 @@ export default function Home() {
           title="Instagram Clone"
           type="Individu"
           url="/projects/project-pertama"
+          showTitle={true}
         >
           <ReactTag />
           <ExpressTag />
