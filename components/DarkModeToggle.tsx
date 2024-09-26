@@ -30,6 +30,7 @@ function DarkModeToggle() {
 
   return (
     <button
+      name="LigtDarkToggle"
       className="p-2 rounded-md text-gray-800 dark:text-gray-200 bg-gray-800 dark:bg-white"
       onClick={toggleDarkMode}
     >

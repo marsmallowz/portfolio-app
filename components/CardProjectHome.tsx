@@ -30,6 +30,7 @@ export default function CardProjectHome({
           alt={alt_image}
           width={400}
           height={500}
+          quality={75}
           style={{ cursor: "pointer" }}
           className="p-2 mx-auto sm:transition-transform sm:duration-300 sm:ease-in-out sm:transform-gpu sm:hover:scale-110"
         />
