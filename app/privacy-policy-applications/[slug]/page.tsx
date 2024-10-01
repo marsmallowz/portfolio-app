@@ -8,7 +8,9 @@ import CustomImg from "@/components/mdx/CustomImg";
 import { Metadata } from "next";
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join("content/projects"));
+  const files = fs.readdirSync(
+    path.join("content/privacy-policy-applications")
+  );
   const paths = files.map((filename) => ({
     slug: filename.replace(".mdx", ""),
   }));
