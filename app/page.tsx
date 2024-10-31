@@ -19,6 +19,34 @@ export default function Home() {
       </article>
       <div className="flex flex-col gap-2 p-3 border border-black mt-3 mb-5 bg-white dark:border-slate-200 dark:bg-slate-600 ">
         <CardProjectHome
+          title="Universe Grid - Game of Life"
+          type="Individu"
+          url="/projects/universe-grid"
+          src_image="/image-showcase/UniverseGrid.png"
+          alt_image="Image showcase Universe Grid"
+          showTitle={false}
+        >
+          <ClosedTestTag />
+          <GodotTag />
+          <PlaystoreTag />
+          <MobileTag />
+          <AdmobTag />
+        </CardProjectHome>
+        <CardProjectHome
+          title="Langkah ASN"
+          type="Individu"
+          url="/projects/langkah-asn"
+          src_image="/image-showcase/LangkahASN.png"
+          alt_image="Image showcase Langkah ASN"
+          showTitle={false}
+        >
+          <ReleaseTag />
+          <GodotTag />
+          <PlaystoreTag />
+          <MobileTag />
+          <AdmobTag />
+        </CardProjectHome>
+        <CardProjectHome
           title="Simple Game"
           type="Individu"
           url="/projects/simple-game"
@@ -150,4 +178,28 @@ function TailwindTag() {
 
 function ChakraUiTag() {
   return <Tag name={"Chakra-UI"} color="bg-emerald-500" />;
+}
+
+function GodotTag() {
+  return <Tag name={"Godot Engine"} color="bg-[#478CBF]" />;
+}
+
+function PlaystoreTag() {
+  return <Tag name={"Playstore"} color="bg-[#F38333]" />;
+}
+
+function MobileTag() {
+  return <Tag name={"Mobile"} color="bg-[#33A04A]" />;
+}
+
+function AdmobTag() {
+  return <Tag name={"Admob"} color="bg-[#EA4335]" />;
+}
+
+function ReleaseTag() {
+  return <Tag name={"Release"} color="bg-pink-700" />;
+}
+
+function ClosedTestTag() {
+  return <Tag name={"Closed Test"} color="bg-indigo-700" />;
 }
