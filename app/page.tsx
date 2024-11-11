@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ProfileImage from "@/components/mdx/ProfileImage";
 import CardProjectHome from "@/components/CardProjectHome";
+import Head from "next/head";
 
 export default function Home() {
   const markdownFile = fs.readFileSync(
@@ -14,6 +15,14 @@ export default function Home() {
   const { data: fontMatter, content } = matter(markdownFile);
   return (
     <div>
+      <Head>
+        <title>Home Page</title>
+        <link
+          rel="canonical"
+          href="https://www.alsandymaulana.com"
+          key="canonical"
+        />
+      </Head>
       <article className="prose dark:prose-invert">
         <MDXRemote source={content} components={{ img: ProfileImage }} />
       </article>
