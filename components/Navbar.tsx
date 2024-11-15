@@ -31,9 +31,16 @@ export default function Navbar() {
         >
           Project
         </Link>
-        <div className="text-slate-500 dark:text-slate-400 cursor-not-allowed ">
+        <Link
+          href={"/blogs"}
+          className={
+            pathname !== "/blogs"
+              ? "text-slate-500 dark:text-slate-400"
+              : "text-black dark:text-white font-medium"
+          }
+        >
           Blog
-        </div>
+        </Link>
       </div>
       <DarkModeToggle />
     </div>
