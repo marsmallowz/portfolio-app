@@ -31,7 +31,6 @@ export default function CardProjectHome({
           width={450}
           height={300}
           quality={65}
-          priority
           style={{ cursor: "pointer" }}
           className="p-2 mx-auto sm:transition-transform sm:duration-300 sm:ease-in-out sm:transform-gpu sm:hover:scale-110"
         />
