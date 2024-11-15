@@ -5,7 +5,15 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ProfileImage from "@/components/mdx/ProfileImage";
 import CardProjectHome from "@/components/CardProjectHome";
-import Head from "next/head";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home Page",
+  alternates: {
+    canonical: "https://www.alsandymaulana.com",
+  },
+};
 
 export default function Home() {
   const markdownFile = fs.readFileSync(
@@ -15,14 +23,6 @@ export default function Home() {
   const { data: fontMatter, content } = matter(markdownFile);
   return (
     <div>
-      <Head>
-        <title>Home Page</title>
-        <link
-          rel="canonical"
-          href="https://www.alsandymaulana.com"
-          key="canonical"
-        />
-      </Head>
       <article className="prose dark:prose-invert">
         <MDXRemote source={content} components={{ img: ProfileImage }} />
       </article>
@@ -59,7 +59,7 @@ export default function Home() {
           title="Simple Game"
           type="Individu"
           url="/projects/simple-game"
-          src_image="/image-showcase/Simple%20Game%20Showcase.png"
+          src_image="/image-showcase/SimpleGameShowcase.png"
           alt_image="Image showcase simplegame"
           showTitle={false}
         >
@@ -72,7 +72,7 @@ export default function Home() {
           title="Skill Swap App (Tukar-Menukar)"
           type="Individu"
           url="/projects/project-keempat"
-          src_image="/image-showcase/Tukar-Menukar%20showcase.png"
+          src_image="/image-showcase/Tukar-Tukar-MenukarShowcase.png"
           alt_image="Image showcase tukar-menukar"
           showTitle={false}
         >
@@ -86,7 +86,7 @@ export default function Home() {
           title="Multi Warehouse E-Commerce (NiagaJaya)"
           type="Team"
           url="/projects/project-ketiga"
-          src_image="/image-showcase/Niagajaya%20showcase.png"
+          src_image="/image-showcase/NiagajayaShowcase.png"
           alt_image="Image showcase niagajaya"
           showTitle={false}
         >

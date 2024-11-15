@@ -2,11 +2,15 @@
   "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
@@ -30,6 +34,8 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9"
+    "@cloudflare/next-on-pages": "^1.13.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "eslint-plugin-next-on-pages": "^1.13.5"
   }
 }
