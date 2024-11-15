@@ -72,7 +72,7 @@ export default function Home() {
           title="Skill Swap App (Tukar-Menukar)"
           type="Individu"
           url="/projects/project-keempat"
-          src_image="/image-showcase/Tukar-Tukar-MenukarShowcase.png"
+          src_image="/image-showcase/Tukar-MenukarShowcase.png"
           alt_image="Image showcase tukar-menukar"
           showTitle={false}
         >
