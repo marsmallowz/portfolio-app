@@ -2,7 +2,12 @@ import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
 import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  assetPrefix:
+    process.env.NODE_ENV === "development"
+      ? undefined
+      : "https://alsandymaulana.com",
+};
 
 if (process.env.NODE_ENV === "development") {
   await setupDevPlatform();
