@@ -7,6 +7,20 @@ const nextConfig = {
     process.env.NODE_ENV === "development"
       ? undefined
       : "https://alsandymaulana.com",
+  async headers() {
+    return [
+      {
+        source: "/projects/*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value:
+              "public, max-age=60, s-maxage=600, stale-while-revalidate=14400, stale-if-error=14400",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 if (process.env.NODE_ENV === "development") {
